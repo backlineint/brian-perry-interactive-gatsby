@@ -12,7 +12,9 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "clean": "rm -rf .cache",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@weknow/gatsby-remark-drupal": "^0.3.2",
@@ -26,6 +28,12 @@
     "react-dom": "^16.10.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
+    "babel-loader": "^8.0.6",
     "prettier": "^1.18.2"
   },
   "repository": {
