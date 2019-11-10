@@ -9,7 +9,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://brian-perry-interactive.lndo.site/`
+        baseUrl: `http://brian-perry-interactive.lndo.site:8000/`
       }
     },
     `gatsby-plugin-sharp`, 
@@ -20,7 +20,7 @@ module.exports = {
           {
             resolve: `@weknow/gatsby-remark-drupal`,
             options: {
-              nodes: [`markdown`]
+              nodes: [`gatsby_md_post_markdown_post`]
             }
           },
           {

@@ -5,16 +5,16 @@ const Debug = ({ data }) => (
   <>
     <pre>{JSON.stringify(data, null, 4)}</pre>
     <p>Raw Markdown:</p>
-    <p>{data.allNodeMarkdown.nodes[0].fields.markdownBody.childMarkdownRemark.rawMarkdownBody}</p>
+    <p>{data.allNodeGatsbyMdPostMarkdownPost.nodes[0].fields.markdownBody.childMarkdownRemark.rawMarkdownBody}</p>
     <p>Processed Markdown:</p>
-    <p>{data.allNodeMarkdown.nodes[0].fields.markdownBody.childMarkdownRemark.html}</p>
-    <div dangerouslySetInnerHTML={{ __html: data.allNodeMarkdown.nodes[0].fields.markdownBody.childMarkdownRemark.html }}></div>
+    <p>{data.allNodeGatsbyMdPostMarkdownPost.nodes[0].fields.markdownBody.childMarkdownRemark.html}</p>
+    <div dangerouslySetInnerHTML={{ __html: data.allNodeGatsbyMdPostMarkdownPost.nodes[0].fields.markdownBody.childMarkdownRemark.html }}></div>
   </>
 )
 
 export const query = graphql`
   {
-    allNodeMarkdown {
+    allNodeGatsbyMdPostMarkdownPost {
       nodes {
         fields {
           markdownBody {
