@@ -1,0 +1,17 @@
+.drupal-markdown-post {
+  width: calc(100% - 8rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: white;
+
+  .title {
+    max-width: 70rem;
+    margin: auto;
+  }
+  .body {
+    max-width: 70rem;
+    margin: auto;
+  }
+}
