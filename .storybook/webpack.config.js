@@ -24,7 +24,8 @@ module.exports = ({ config }) => {
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ["browser", "module", "main"]
 
-  // Update for SASS / CSS Modules support - from https://github.com/storybookjs/storybook/issues/6055
+  // Update for SASS / CSS Modules support - minor adjustments to snippet 
+  // from https://github.com/storybookjs/storybook/issues/6055#issuecomment-535450942
   config.module.rules.push({
     test: /\.scss$/,
     use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -40,7 +41,8 @@ module.exports = ({ config }) => {
         options: {
           modules: true,
           importLoaders: 1,
-          localIdentName: '[path]__[name]___[local]'
+          camelCase: 'dashesOnly',
+          localIdentName: '[name]--[local]--[hash:base64:5]'
         }
       },
       'sass-loader'

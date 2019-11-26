@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "clean": "gatsby clean",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./mock -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
