@@ -1,9 +1,12 @@
-import React from "react"
+import React from 'react'
+import Layout from "./Layout"
+import DrupalMarkdownPost from './DrupalMarkdownPost'
 
-//import styles from "./Post.module.scss"
+export default {
+  title: 'Post Template',
+};
 
-const exampleMarkdown = `<h1>Example MD Post</h1>
-<div><p><em>Enter markdown here updated</em></p>
+const exampleMarkdown = `<div><p><em>Enter markdown here updated</em></p>
 <h1>Heading</h1>
 <ul>
 <li>List</li>
@@ -18,10 +21,19 @@ const exampleMarkdown = `<h1>Example MD Post</h1>
   </a>
     </span></div>`;
 
-export default () => {
-  return(
-    <article>
-      <div dangerouslySetInnerHTML={{__html: exampleMarkdown}}></div>
-    </article>
-  )
+const fields = {
+  markdownBody: {
+    childMarkdownRemark: {
+      html: exampleMarkdown
+    }
+  }
 }
+
+export const defaultPostTemplate = () => (
+  <Layout>
+    <DrupalMarkdownPost
+      title="Example Markdown Post"
+      fields={fields}
+    />
+  </Layout>
+)
