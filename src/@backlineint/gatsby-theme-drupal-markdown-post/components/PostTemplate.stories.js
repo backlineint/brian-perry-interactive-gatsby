@@ -1,9 +1,12 @@
 import React from 'react'
+import { withKnobs, boolean } from "@storybook/addon-knobs";
+
 import Layout from "./Layout"
 import DrupalMarkdownPost from './DrupalMarkdownPost'
 
 export default {
   title: 'Post Template',
+  decorators: [withKnobs]
 };
 
 // Todo - come up with a slightly more accurate way to support Gatsby images.
@@ -30,11 +33,22 @@ const fields = {
   }
 }
 
-export const defaultPostTemplate = () => (
+export const postTemplateBusiness = () => (
   <Layout>
     <DrupalMarkdownPost
       title="Example Markdown Post"
       fields={fields}
+      business={boolean("Business", true)}
+    />
+  </Layout>
+)
+
+export const postTemplatePleasure = () => (
+  <Layout>
+    <DrupalMarkdownPost
+      title="Example Markdown Post"
+      fields={fields}
+      business={boolean("Business", false)}
     />
   </Layout>
 )

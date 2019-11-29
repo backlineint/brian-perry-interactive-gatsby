@@ -1,8 +1,11 @@
 import React from 'react'
+import { withKnobs, boolean } from "@storybook/addon-knobs";
+
 import DrupalMarkdownPost from './DrupalMarkdownPost'
 
 export default {
   title: 'Drupal Markdown Post',
+  decorators: [withKnobs]
 };
 
 const exampleMarkdown = `<div><p><em>Enter markdown here updated</em></p>
@@ -27,9 +30,18 @@ const fields = {
   }
 }
 
-export const defaultDrupalMarkdownPost = () => (
+export const DrupalMarkdownPostBusiness = () => (
   <DrupalMarkdownPost 
     title="Example Markdown Post"
     fields={fields}
+    business={boolean("Business", true)}
+  />
+)
+
+export const DrupalMarkdownPostPleasure = () => (
+  <DrupalMarkdownPost 
+    title="Example Markdown Post"
+    fields={fields}
+    business={boolean("Business", false)}
   />
 )
