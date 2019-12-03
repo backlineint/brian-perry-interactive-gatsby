@@ -11,7 +11,12 @@ export default {
 
 // Todo - come up with a slightly more accurate way to support Gatsby images.
 
-const exampleMarkdown = `<div><p><em>Enter markdown here updated</em></p>
+const exampleMarkdown = `
+<p><a href="#">New Year's resolution time!</a></p>
+<p>Things felt a little different heading into 2019. I usually have a pretty good handle on what I want to accomplish in the upcoming year, along with a formal resolution. But this year, nothing. Initially that seemed terrifying, but the more I think about it, that openness and lack of expectation is an exciting resolution in and of itself.</p>
+<p>Standing in my now <em>mostly</em> finished kitchen I also came up with another late breaking resolution. 2019 is going to be the year of intentional home improvements. Rather than letting a flood force me into it, I'm going to try to proactively decorate, improve and declutter. It is pleasantly (mostly) non-technical, and I can tackle it in tiny chunks throughout the year.</p>
+<p>Wishing everyone a happy and productive 2019 full of dry kitchens.</p>
+<div><p><em>Enter markdown here updated</em></p>
 <h1>Heading</h1>
 <ul>
 <li>List</li>
@@ -36,7 +41,7 @@ const fields = {
 export const postTemplateBusiness = () => (
   <Layout>
     <DrupalMarkdownPost
-      title="Example Markdown Post"
+      title="Intentional Home Improvements"
       fields={fields}
       business={boolean("Business", true)}
     />

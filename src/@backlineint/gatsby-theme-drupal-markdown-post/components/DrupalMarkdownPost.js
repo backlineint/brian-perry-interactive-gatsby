@@ -7,12 +7,15 @@ import styles from './DrupalMarkdownPost.module.scss'
 const DrupalMarkdownPost = ({ title, fields, business }) => {
   if (business) {
     return(
-  <div className={styles.drupalMarkdownPost}>
-    <h1 className={styles.title}>
-      {title}
-    </h1>
-    <div className={styles.title} dangerouslySetInnerHTML={{ __html: fields.markdownBody.childMarkdownRemark.html }}></div>
-  </div>
+      <div className={styles.drupalMarkdownPost}>
+        <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,700&display=swap" rel="stylesheet" />
+        </Helmet>
+        <h1 className={styles.title}>
+          {title}
+        </h1>
+        <div dangerouslySetInnerHTML={{ __html: fields.markdownBody.childMarkdownRemark.html }}></div>
+      </div>
     )
   }
   else {

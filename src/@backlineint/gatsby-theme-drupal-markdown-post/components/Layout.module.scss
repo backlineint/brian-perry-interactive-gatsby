@@ -1,11 +1,26 @@
 .layout {
+  nav {
+    padding: 2rem 2rem 6rem;
+    //background-color: #1d514a; // Web depot post
+    //background-color: #042f4b;
+    background-color: #10316b;
+    // Hoyas
+    background-color: rgba(4, 30, 66, 1);
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+  }
   .post-wrapper {
     width: calc(100% - 8rem);
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
-
-    article {
+    background-color: #faf7f7; // Was shite
+    //border: 1px solid cadetblue; // Should be business only
+    //border: 1px solid #3e3e3e;//#ff6060
+    position: relative;
+    top: -4rem;
+    .article {
       max-width: 45rem;
       margin: auto;
       padding-top: 2rem;

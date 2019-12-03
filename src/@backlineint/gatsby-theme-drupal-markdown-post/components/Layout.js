@@ -5,11 +5,13 @@ import styles from './Layout.module.scss'
 
 const Layout = ({ children }) => (
   <div className={styles.layout}>
-    <p>Shadowing Layout Just for Styles</p>
+    <nav>
+      Name in Crazy Font
+    </nav>
     <div className={styles.postWrapper}>
-      <article>
+      <div className={styles.article}>
         {children}
-      </article>
+      </div>
     </div>
   </div>
 )
