@@ -9,11 +9,16 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: "@backlineint/gatsby-theme-drupal-markdown-post",
+      resolve: `@backlineint/gatsby-theme-drupal-markdown-post`,
       options: {
-        baseUrl: "http://brian-perry-interactive.lndo.site:8080/",
-        basePath: "/posts",
+        basePath: `/posts`, // Optional, defaults to `/`
       },
     },
+    {
+      resolve: `gatsby-source-drupal`, // Configure gatsby-source-drupal as needed
+      options: {
+        baseUrl: `http://brian-perry-interactive.lndo.site:8000/`,
+      },
+    }
   ],
 }
