@@ -9,7 +9,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: `@backlineint/gatsby-theme-drupal-markdown-post`,
+      resolve: `gatsby-theme-drupal-markdown-post`,
       options: {
         basePath: `/posts`, // Optional, defaults to `/`
       },
